@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { DiscussionEmbed } from 'disqus-react';
 import { DepartmentBentoRow, TopBentoRow } from './components/BentoGrid';
 import { CartDrawer } from './components/CartDrawer';
 import { CatalogResultsView } from './components/CatalogResultsView';
@@ -345,6 +346,16 @@ export default function App() {
                 onSelectCategory={handleSelectCategory}
               />
             </div>
+
+            <DiscussionEmbed
+              shortname="amazon-group-5"
+              config={{
+                url: window.location.href,
+                identifier: 'amazon-sg-home-discussion',
+                title: 'Amazon.sg Storefront Discussion',
+                language: 'en',
+              }}
+            />
           </>
         )}
       </main>
